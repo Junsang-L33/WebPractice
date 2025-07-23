@@ -1,0 +1,111 @@
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100svh;
+  background: rgb(40, 40, 55); /* 살짝 밝은 어두운 배경색 */
+}
+
+.menu-bar {
+  width: 100%;
+  background: #22263a;
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 80px; /* 로고와 메뉴 사이 공간 추가 */
+}
+
+.menu-list {
+  display: flex;
+  gap: 200px; /* 메뉴 글자 사이 간격을 적당히 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-list li {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menu-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.board-box {
+  width: 800px;
+  height: 600px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-title {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.board-content {
+  flex: 1;
+  /* 게시글 영역 스타일 */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgb(40, 40, 55); /* 어두운 배경색 추가 */
+}
+
+.schedule-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 세로 3줄 */
+  gap: 60px; /* 가로/세로 카드 간격을 16px로 줄임 */
+  padding: 32px;
+  margin: 40px;
+}
+
+.race-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+  margin-bottom: 30px; /* 카드끼리 세로 간격 추가 */
+}
+
+.year-card {
+  background: #22263a;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 16px;
+  padding: 24px 0;
+  width: 220px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: background 0.2s;
+  display: block;
+}
+
+.year-card:hover {
+  background: #e10600;
+}
