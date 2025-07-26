@@ -2,6 +2,9 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import SchedulePage from './pages/SchedulePage'
 import ScheduleYearPage from './pages/ScheduleYearPage'
+import LoginPage from './pages/LoginPage'
+import SignupPage from './pages/SignupPage';
+
 
 function Home() {
   return (
@@ -25,22 +28,39 @@ function App() {
   return (
     <Router>
       <div className="center-container">
-        <nav className="menu-bar">
+        <nav className="menu-bar" style={{ display: 'flex', alignItems: 'center' }}>
           <div className="logo-area">
             <Link to="/">
               <img src="/f1logo.svg" alt="F1 로고" style={{ height: '32px', verticalAlign: 'middle' }} />
             </Link>
           </div>
-          <ul className="menu-list">
+          <ul
+            className="menu-list"
+            style={{
+              display: 'flex',
+              gap: '100px',
+              margin: 0,
+              padding: 0,
+              listStyle: 'none',
+              flex: 1,
+              alignItems: 'center'
+            }}
+          >
             <li><Link to="/schedule">Schedule</Link></li>
             <li>Results</li>
             <li>Drivers</li>
+            <li style={{ marginLeft: 'auto', marginRight: '50px' }}>
+              <Link to="/login">Login</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/schedule" element={<SchedulePage />} />
           <Route path="/schedule/:year" element={<ScheduleYearPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+
         </Routes>
       </div>
     </Router>
